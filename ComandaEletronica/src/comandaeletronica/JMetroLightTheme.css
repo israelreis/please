@@ -244,14 +244,14 @@
 }
 
 .check-box:indeterminate > .box > .mark {
-    -fx-background-color: black;
+    -fx-background-color: -swatch-500;
     -fx-background-insets: 2.8;
     -fx-padding:7px;
     -fx-shape: null;
 }
 
 .check-box:selected > .box > .mark{
-    -fx-background-color: black;
+    -fx-background-color: -swatch-500;
 }
 
 .check-box:disabled
@@ -267,10 +267,10 @@
 
 .check-box:armed > .box
 {
-    -fx-background-color: white, black;
+    -fx-background-color: -swatch-500;
     -fx-background-insets: -1, 2;
     -fx-background-radius: 0, 0;
-    -fx-border-color: black;
+    -fx-border-color: -swatch-500;
 }
 
 .check-box:pressed:selected > .box > .mark
@@ -280,7 +280,7 @@
 
 .check-box:armed > .box > .mark
 {
-    -fx-background-color: black;
+    -fx-background-color: white;
 }
 
 
@@ -291,7 +291,11 @@
  ******************************************************************************/
 
 .radio-button {
-    -fx-text-fill: #212121;
+    -fx-text-fill: -swatch-500;
+}
+
+.radio-button:hover{
+    -fx-text-fill: -swatch-600;
 }
 
 .radio-button > .radio  {
@@ -300,7 +304,7 @@
    -fx-background-insets: 0;
 
    -fx-border-radius: 1.0em;
-   -fx-border-color: #bababa;
+   -fx-border-color: -swatch-500;
    -fx-border-width: 2px;
 
    -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */
@@ -314,11 +318,11 @@
 }
 
 .radio-button:selected > .radio > .dot {
-    -fx-background-color: #212121;
+    -fx-background-color: -swatch-500;
 }
 
 .radio-button:hover > .radio {
-    -fx-border-color: #919191;
+    -fx-border-color: -swatch-600;
 }
 
 .radio-button:disabled
@@ -343,8 +347,19 @@
 
 .radio-button:pressed > .radio
 {
-    -fx-background-color: #212121;
-    -fx-border-color: #212121;
+    -fx-background-color: -swatch-500;
+    -fx-border-color: -swatch-500;
+}
+
+.radio-button:pressed > .radio > .dot
+{
+    -fx-background-color: white;
+}
+
+.radio-button:pressed:selected > .radio
+{
+    -fx-background-color: -swatch-500;
+    -fx-border-color: -swatch-500;
 }
 
 .radio-button:pressed:selected > .radio > .dot
@@ -366,9 +381,9 @@
     -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em;  /*4 8 4 8 */
 
     -fx-font-family: "Segoe UI Semilight", "Segoe UI Light", "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-text-fill: rgba(0, 0, 0, 0.6);
+    -fx-text-fill: -swatch-500;
 
-    -fx-border-color: #808080;
+    -fx-border-color: -swatch-500;
     -fx-border-width: 2px;
 
     -fx-effect: null;

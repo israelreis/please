@@ -7,4 +7,28 @@
 <?import javafx.scene.layout.*?>
 
 
-<StackPane styleClass="root" stylesheets="@JMetroLightTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="comandaeletronica.UsuariosController" />
+<StackPane styleClass="root" stylesheets="@JMetroLightTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="comandaeletronica.UsuariosController">
+   <children>
+      <BorderPane prefHeight="419.0" prefWidth="687.0">
+         <center>
+            <AnchorPane prefHeight="433.0" prefWidth="436.0" BorderPane.alignment="CENTER">
+               <children>
+                  <CheckBox layoutX="14.0" layoutY="26.0" mnemonicParsing="false" text="CheckBox" />
+                  <ComboBox layoutX="14.0" layoutY="60.0" prefWidth="150.0" />
+                  <DatePicker layoutX="13.0" layoutY="107.0" />
+                  <ProgressBar layoutX="22.0" layoutY="151.0" prefWidth="200.0" progress="0.0" />
+                  <ProgressIndicator layoutX="195.0" layoutY="26.0" progress="0.0" />
+                  <TextArea layoutX="458.0" layoutY="84.0" prefHeight="200.0" prefWidth="200.0" />
+                  <ToggleButton layoutX="428.0" layoutY="341.0" mnemonicParsing="false" text="ToggleButton">
+                     <tooltip>
+                        <Tooltip text="ToogleButton" />
+                     </tooltip>
+                  </ToggleButton>
+                  <Slider layoutX="402.0" layoutY="21.0" orientation="VERTICAL" />
+                  <RadioButton layoutX="266.0" layoutY="374.0" mnemonicParsing="false" text="RadioButton" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
