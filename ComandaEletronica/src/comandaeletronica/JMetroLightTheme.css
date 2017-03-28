@@ -210,7 +210,7 @@
  ******************************************************************************/
 
 .check-box {
-    -fx-text-fill: black;
+    -fx-text-fill: -swatch-500;
 }
 
 /* unselected */
@@ -218,7 +218,7 @@
     -fx-background-color: white;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
-    -fx-border-color: #bababa;
+    -fx-border-color: -swatch-500;
     -fx-border-width: 2px;
     -fx-border-style: solid;
     -fx-padding: 1;
@@ -233,7 +233,7 @@
 }
 
 .check-box:hover > .box {
-    -fx-border-color: #919191;
+    -fx-border-color: -swatch-600;
 }
 
 /* focused */
