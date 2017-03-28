@@ -1,11 +1,3 @@
-/*
-    Document   : JMetroLightTheme
-    Created on : Oct 16, 2012, 6:28:59 PM
-    Author     : Pedro Duque Vieira
-    Description:
-        Light Metro style sheet for use in JavaFX applications
-*/
-
 .root{
     -fx-background-color: white;
     -fx-box-border: #2B579A;
@@ -1091,7 +1083,7 @@
  ******************************************************************************/
 
 .choice-box  {
-    -fx-background-color: transparent, #bababa, transparent, white;
+    -fx-background-color: transparent, -swatch-500, transparent, white;
     -fx-background-radius: 0, 0, 0, 0;
     -fx-padding: 0em 0.166667em 0em 0.166667em; /* 0 2px 0 2px*/
 
@@ -1100,18 +1092,22 @@
 }
 
 .choice-box:focused {
-    -fx-background-color: transparent, #5c5c5c, transparent, white;
+    -fx-background-color: transparent, -swatch-500, transparent, white;
     -fx-background-insets: -1.4, 0, 1, 2;
 
     -fx-background-radius: 0, 0, 0, 0;
 }
 
 .choice-box:focused:hover {
-    -fx-background-color: transparent, #909090, transparent, white;
+    -fx-background-color: transparent, -swatch-600, transparent, white;
 }
 
 .choice-box:disabled {
     -fx-opacity: .4;
+}
+
+.choice-box> .open-button > .arrow{
+    -fx-background-color: -swatch-500;
 }
 
 .radio-menu-item:checked > .left-container > .radio {
@@ -1120,6 +1116,37 @@
     -fx-scale-shape: true;
 }
 
+/*******************************************************************************
+ *                                                                             *
+ * ProgressIndicator                                                           *
+ *                                                                             *
+ ******************************************************************************/
+
+.progress-indicator {
+    -fx-indeterminate-segment-count: 12;
+    -fx-spin-enabled: true;
+}
+.progress-indicator > .determinate-indicator > .indicator {
+    -fx-background-color: -swatch-500,
+        radial-gradient(center 50% 50%, radius 50%, -fx-control-inner-background 70%, derive(-fx-control-inner-background, -9%) 100%),
+        -fx-control-inner-background;
+    -fx-background-insets: 0, 1, 5 2 1 2;
+    -fx-padding: 0.166667em; /* 2px */
+}
+.progress-indicator > .determinate-indicator > .progress {
+    -fx-background-color: -swatch-500;
+    -fx-padding: 0.083333em; /* 1px */
+}
+.progress-indicator > .determinate-indicator > .tick {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-padding: 0.666667em; /* 8 */
+    -fx-shape: "M-0.25,6.083c0.843-0.758,4.583,4.833,5.75,4.833S14.5-1.5,15.917-0.917c1.292,0.532-8.75,17.083-10.5,17.083C3,16.167-1.083,6.833-0.25,6.083z";
+}
+.progress-indicator:determinate >.determinate-indicator > .percentage {
+    -fx-font-size: 0.916667em; /* 11pt - 1 less than the default font */
+    -fx-fill: -swatch-500;
+}
 
 /*******************************************************************************
  *                                                                             *
