@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="hBoxCell" alignment="CENTER_LEFT" stylesheets="@JMetroLightTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="iconeMenu" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets right="10.0" />
+         </HBox.margin>
+      </ImageView>
+      <Label fx:id="labelMenu" text="Label">
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+      </Label>
+   </children>
+</HBox>
