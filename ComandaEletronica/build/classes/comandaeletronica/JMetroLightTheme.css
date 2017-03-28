@@ -1,13 +1,13 @@
 .root{
     -fx-background-color: white;
-    -fx-box-border: #2B579A;
+    -fx-box-border: #9A2B2B;
     /* Swatch Colors - Blue*/
 	-swatch-100: #BBDEFB;
 	-swatch-200: #90CAF9;
 	-swatch-300: #64BEF6;
-	-swatch-400: #426CAD;
-	-swatch-500: #2B579A;
-	-swatch-600: #13418B;
+	-swatch-400: #AD4242;
+	-swatch-500: #9A2B2B;
+	-swatch-600: #8B1212;
 	/*default text */
 	-fx-text-base-color: rgb(100.0, 100.0, 100.0);
 	-fx-text-button-normal: -swatch-500;
@@ -719,7 +719,7 @@
 {
     -fx-opacity: 1;
     -fx-background-color: #d9d9d9, #eaeaea;
-    -fx-text-fill: -swatch-500;
+    -fx-text-fill: -swatch-400;
 }
 
 .item-title.disabled{
@@ -1241,7 +1241,7 @@
 }
  
 .table-view .column-header .label{
-    -fx-text-fill: #2b579a;
+    -fx-text-fill: -fx-box-border;
     -fx-alignment: CENTER_LEFT;
     -fx-padding: 0.5em 0.5em 0.1em 0.3em;
 }

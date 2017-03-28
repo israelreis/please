@@ -8,9 +8,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane minHeight="400.0" minWidth="600.0" stylesheets="@JMetroLightTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="comandaeletronica.HomeController">
+<StackPane minHeight="400.0" minWidth="600.0" styleClass="root" stylesheets="@JMetroLightTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="comandaeletronica.HomeController">
    <children>
-      <BorderPane fx:id="principal" styleClass="root">
+      <BorderPane fx:id="principal">
          <left>
             <VBox fx:id="vbSide" alignment="TOP_CENTER" prefWidth="200.0" styleClass="left" BorderPane.alignment="CENTER">
                <children>
@@ -22,8 +22,7 @@
                   <TextField fx:id="tfProcurar" promptText="Procurar">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </VBox.margin>
-                  </TextField>
+                     </VBox.margin></TextField>
                   <ListView fx:id="lvMenu" maxHeight="220.0" onMouseClicked="#TrocaTela" />
                </children>
             </VBox>
