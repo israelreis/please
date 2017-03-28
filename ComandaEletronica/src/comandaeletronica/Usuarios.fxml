@@ -11,24 +11,52 @@
    <children>
       <BorderPane prefHeight="419.0" prefWidth="687.0">
          <center>
-            <AnchorPane prefHeight="433.0" prefWidth="436.0" BorderPane.alignment="CENTER">
-               <children>
-                  <CheckBox layoutX="14.0" layoutY="26.0" mnemonicParsing="false" text="CheckBox" />
-                  <ComboBox layoutX="14.0" layoutY="60.0" prefWidth="150.0" />
-                  <DatePicker layoutX="13.0" layoutY="107.0" />
-                  <ProgressBar layoutX="22.0" layoutY="151.0" prefWidth="200.0" progress="0.0" />
-                  <ProgressIndicator layoutX="195.0" layoutY="26.0" progress="0.0" />
-                  <TextArea layoutX="458.0" layoutY="84.0" prefHeight="200.0" prefWidth="200.0" />
-                  <ToggleButton layoutX="428.0" layoutY="341.0" mnemonicParsing="false" text="ToggleButton">
-                     <tooltip>
-                        <Tooltip text="ToogleButton" />
-                     </tooltip>
-                  </ToggleButton>
-                  <Slider layoutX="402.0" layoutY="21.0" orientation="VERTICAL" />
-                  <RadioButton layoutX="266.0" layoutY="374.0" mnemonicParsing="false" text="RadioButton" />
-               </children>
-            </AnchorPane>
+            <ScrollPane prefViewportHeight="398.0" prefViewportWidth="658.0">
+               <content>
+                  <AnchorPane prefHeight="433.0" prefWidth="436.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <CheckBox layoutX="14.0" layoutY="26.0" mnemonicParsing="false" text="CheckBox" />
+                        <ComboBox layoutX="14.0" layoutY="60.0" prefWidth="150.0" />
+                        <DatePicker layoutX="13.0" layoutY="107.0" />
+                        <ProgressBar layoutX="22.0" layoutY="151.0" prefWidth="200.0" progress="0.55" />
+                        <ProgressIndicator layoutX="195.0" layoutY="26.0" progress="1.0" />
+                        <TextArea layoutX="458.0" layoutY="84.0" prefHeight="200.0" prefWidth="200.0" />
+                        <ToggleButton layoutX="428.0" layoutY="341.0" mnemonicParsing="false" text="ToggleButton">
+                           <tooltip>
+                              <Tooltip text="ToogleButton" />
+                           </tooltip>
+                        </ToggleButton>
+                        <RadioButton layoutX="266.0" layoutY="374.0" mnemonicParsing="false" text="RadioButton" />
+                        <ScrollBar layoutX="421.0" layoutY="41.0" orientation="VERTICAL" />
+                        <ComboBox layoutX="100.0" layoutY="298.0" prefWidth="150.0" />
+                        <Slider layoutX="384.0" layoutY="53.0" orientation="VERTICAL" />
+                        <ChoiceBox layoutX="266.0" layoutY="14.0" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
          </center>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
       </BorderPane>
    </children>
 </StackPane>
