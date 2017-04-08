@@ -14,6 +14,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -49,6 +50,9 @@ public class HomeController implements Initializable {
     @FXML
     private ListView<Menu> lvMenu;
     
+    @FXML
+    private Label Title;
+    
     private boolean isDrawerOpen;
     TranslateTransition openNav;
     TranslateTransition closeNav;
@@ -65,12 +69,15 @@ public class HomeController implements Initializable {
         switch(lvMenu.getSelectionModel().getSelectedIndex()){
             case 0:
                 trocaTela(event,"Inicio.fxml",0);
+                changeTitle(lvMenu.getSelectionModel().getSelectedIndex());
                 break;
             case 1:
                 trocaTela(event,"Usuarios.fxml",1);
+                changeTitle(lvMenu.getSelectionModel().getSelectedIndex());
                 break;
             case 2:
                 trocaTela(event,"Relatorios.fxml",2);
+                changeTitle(lvMenu.getSelectionModel().getSelectedIndex());
                 break;
             case 3:
                 trocaTela(event,"",3);
@@ -78,6 +85,10 @@ public class HomeController implements Initializable {
         }
     }
 
+    private void changeTitle(int position){
+        Title.setText(items.get(position).getLabel());
+    }
+    
     public HomeController(){
         items.addAll(
                 new Menu("Home", homeI),

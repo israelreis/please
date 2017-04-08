@@ -39,6 +39,7 @@
          <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="56.0" styleClass="top" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <items>
                 <Button fx:id="menu" contentDisplay="CENTER" styleClass="menuButton" />
+            <Label fx:id="Title" text="Home" />
             </items> 
         </ToolBar>
    </children>
