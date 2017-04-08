@@ -19,10 +19,13 @@
             <children>
             <VBox fx:id="vbSide" alignment="TOP_CENTER" styleClass="left" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fx:id="imgMenu" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgMenu" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
+                     <image>
+                        <Image url="@imagens/icones/logo_plane_urros.png" />
+                     </image>
                   </ImageView>
                   <TextField fx:id="tfProcurar" minHeight="35.0" promptText="Procurar">
                      <VBox.margin>
