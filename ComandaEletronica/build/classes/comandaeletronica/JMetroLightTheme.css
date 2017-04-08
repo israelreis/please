@@ -94,6 +94,19 @@
     -fx-background-color: white;
 }
 
+.top{
+    -fx-background-color: -swatch-500;
+}
+
+.menuButton{
+    -fx-background-image: url("imagens/icones/Menu-64.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+    -fx-background-color: none;
+    -fx-cursor: hand;
+}
+
 .header{
     -fx-font-size: 3.5em;
     -fx-font-family: "Segoe UI Semilight";
