@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCombination;
 import javafx.stage.Stage;
 
 public class ComandaEletronica extends Application {
@@ -18,6 +19,7 @@ public class ComandaEletronica extends Application {
         this.stage = stage;
         scene = new Scene(root);
         this.stage.setFullScreen(true);
+        this.stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
         this.stage.setScene(scene);
         this.stage.show();
     }
