@@ -8,28 +8,39 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane minHeight="400.0" minWidth="600.0" styleClass="root" stylesheets="@JMetroLightTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="comandaeletronica.HomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@JMetroLightTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="comandaeletronica.HomeController">
    <children>
-      <BorderPane fx:id="principal">
-         <left>
-            <VBox fx:id="vbSide" alignment="TOP_CENTER" prefWidth="200.0" styleClass="left" BorderPane.alignment="CENTER">
+        <StackPane fx:id="principal" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.0">
+            <children>
+                <fx:include source="Inicio.fxml" />
+            </children>
+        </StackPane>  
+         <AnchorPane fx:id="navList" prefWidth="250.0" styleClass="left" translateX="-250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="56.0">
+            <children>
+            <VBox fx:id="vbSide" alignment="TOP_CENTER" styleClass="left" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fx:id="imgMenu" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgMenu" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
+                     <image>
+                        <Image url="@imagens/icones/logo_plane_urros.png" />
+                     </image>
                   </ImageView>
-                  <TextField fx:id="tfProcurar" promptText="Procurar">
+                  <TextField fx:id="tfProcurar" minHeight="35.0" promptText="Procurar">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin></TextField>
                   <ListView fx:id="lvMenu" maxHeight="220.0" onMouseClicked="#TrocaTela" />
                </children>
             </VBox>
-         </left>
-         <center>
-              <fx:include source="Inicio.fxml" />
-         </center>
-      </BorderPane>
+            </children>
+         </AnchorPane>
+         <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="56.0" styleClass="top" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <Button fx:id="menu" contentDisplay="CENTER" styleClass="menuButton" />
+            <Label fx:id="Title" text="Home" />
+            </items> 
+        </ToolBar>
    </children>
-</StackPane>
+</AnchorPane>
