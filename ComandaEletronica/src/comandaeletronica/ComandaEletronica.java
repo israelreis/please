@@ -12,13 +12,17 @@ public class ComandaEletronica extends Application {
     
     public static Scene scene;
     public static Stage stage;
+    public static Http http;
     
     @Override
     public void start(Stage stage) throws Exception {
+        http = new Http();
+        String json = http.sendGet("http://localhost:8080/ComandaWS/webresources/Comanda");
+        System.out.println(json);
         Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
         this.stage = stage;
         scene = new Scene(root);
-        this.stage.setFullScreen(true);
+        //this.stage.setFullScreen(true);
         this.stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
         this.stage.setScene(scene);
         this.stage.show();

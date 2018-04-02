@@ -5,10 +5,11 @@
  */
 package WebService;
 
+import com.google.gson.Gson;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
-import javax.ws.rs.Produces;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
@@ -19,31 +20,31 @@ import javax.ws.rs.core.MediaType;
  *
  * @author Reis
  */
-@Path("generic")
-public class ComandaWS {
+@Path("Comanda")
+public class ComandaResource {
 
     @Context
     private UriInfo context;
 
     /**
-     * Creates a new instance of ComandaWS
+     * Creates a new instance of ComandaResource
      */
-    public ComandaWS() {
+    public ComandaResource() {
     }
 
     /**
-     * Retrieves representation of an instance of WebService.ComandaWS
+     * Retrieves representation of an instance of WebService.ComandaResource
      * @return an instance of java.lang.String
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getJson() {
-        //TODO return proper representation object
-        throw new UnsupportedOperationException();
+        Gson g = new Gson();
+        return g.toJson("Olá meu caro");
     }
 
     /**
-     * PUT method for updating or creating an instance of ComandaWS
+     * PUT method for updating or creating an instance of ComandaResource
      * @param content representation for the resource
      */
     @PUT
