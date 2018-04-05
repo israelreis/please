@@ -25,6 +25,10 @@ public class ComandaResource {
 
     @Context
     private UriInfo context;
+    
+    private final String urlBD = "jdbc:mysql://localhost:3306/lanche_facil";
+    private final String driverBD = "com.mysql.jdbc.Driver";
+    Conexao con = new Conexao();
 
     /**
      * Creates a new instance of ComandaResource
@@ -40,6 +44,8 @@ public class ComandaResource {
     @Produces(MediaType.APPLICATION_JSON)
     public String getJson() {
         Gson g = new Gson();
+        con.conecta(urlBD,driverBD,"root","");
+        con.desconecta();
         return g.toJson("Olá meu caro");
     }
 
